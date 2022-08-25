@@ -1,0 +1,133 @@
+$clr-primary: #d0d6f9
+$clr-neutral-dark: #0b0d17
+$clr-neutral: #ffffff
+$ff-headings: 'Bellefair'
+$ff-subheadings: 'Barlow Condensed'
+$ff-body: 'Barlow'
+
+
+body
+    background-image: url(assets/home/background-home-mobile.jpg)
+
+.contents
+    margin-top: 40px
+    .container1
+        p.subheading
+            font-weight: 400
+            font-size: 16px
+            letter-spacing: 1.5px
+        p.heading
+            margin:
+                top: 24px
+                bottom: 24px
+            font-size: 80px
+        p.body
+            max-width: 98%
+            margin: auto
+    .container2
+        margin-top: 80px
+        .explore
+            margin: auto
+            display: flex
+            width: 150px
+            height: 150px
+            background-color: $clr-neutral
+            border-radius: 50%
+            p.heading
+                font-size: 20px
+                align-self: center
+                color: $clr-neutral-dark
+                margin: auto
+
+@media screen and ( min-width: 768px ) and ( max-width: 990px)
+    body
+        background-image: url(assets/home/background-home-tablet.jpg)
+    .contents
+        
+        .container1
+            margin-top: 120px
+            p.subheading
+                font-size: 18px
+                letter-spacing: 2px
+            p.heading
+                margin-block: 12px
+                font-size: 150px
+            p.body
+                font-size: 18px
+                margin: auto
+                max-width: 500px
+        .container2
+            margin-top: 140px
+            .explore
+                width: 240px
+                height: 240px
+                p.heading
+                    font-size: 35px
+@media screen and ( min-width: 991px )
+    body
+        background-image: url(assets/home/background-home-desktop.jpg)
+    .contents
+        padding-inline: 40px
+        margin: 0px
+        margin-top: 20vh
+        display: grid
+        grid-template-columns: 6fr 4fr
+        .container1
+            text-align: left
+            p.subheading
+                font-size: 22px
+                letter-spacing: 3px
+            p.heading
+                font-size: 110px
+                margin-block: 10px
+            p.body
+                font-size: 18px
+                max-width: 100%
+                margin: 0px
+        .container2
+            margin: auto
+            .explore
+                cursor: pointer
+                box-sizing: content-box
+                width: 200px
+                height: 200px
+                perspective: 1000px
+                border-style: solid
+                border-width: 0px
+                border-color: rgba(204, 204, 204, 0.3)
+                background-clip: padding-box        //to clip the object bg only to the padding box
+                transition:
+                    duration: 500ms
+                    delay: 500ms
+                    property: border-width
+                    timing-funtion: ease-out
+                    fill-mode: forwards
+                &:hover
+                    border-width: 30px
+
+                /*&:hover
+                    border: 40px solid #ccc
+                p.heading
+                    font-size: 30px
+@media screen and ( min-width: 1440px )
+    .contents
+        margin-top: 25vh
+        padding-inline: 120px
+        grid-template-columns: 1fr 1fr
+        .container1
+            width: min-content
+            text-align: left
+            p.subheading
+                font-size: 28px
+                letter-spacing: 4.75px
+            p.heading
+                font-size: 150px
+                margin-block: 20px
+            p.body
+                max-width: 100%
+        .container2
+            .explore
+                transform: scale(2)
+                &:hover
+                    border-width: 40px
+                

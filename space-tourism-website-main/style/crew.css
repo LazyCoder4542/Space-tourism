@@ -1,0 +1,203 @@
+body {
+  background-image: url(assets/crew/background-crew-mobile.jpg);
+}
+
+.contents p.caption.subheading {
+  font-weight: 300;
+  font-size: 16px;
+  word-spacing: 2px;
+}
+
+.contents p.caption.subheading::before {
+  content: "02 ";
+  display: inline;
+  font-weight: 600;
+  color: #666;
+  word-spacing: 10px;
+}
+
+.contents .container .wrapper {
+  margin: 30px;
+  margin-bottom: 0;
+}
+
+.contents .container .wrapper #image {
+  box-sizing: content-box;
+  height: 250px;
+}
+
+.contents .container hr {
+  all: inherit;
+  margin: 0;
+  padding: 0;
+  transform: translateY(-200%);
+  border-top: 1.5px solid rgba(255, 255, 255, 0.4);
+}
+
+.contents .container #nav-bar {
+  display: flex;
+  justify-content: space-between;
+  width: 30%;
+  margin: auto;
+  padding-block: 30px;
+}
+
+.contents .container #nav-bar div {
+  background-color: #ffffff;
+  opacity: 0.5;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+}
+
+.contents .container #nav-bar div.active {
+  opacity: 1 !important;
+}
+
+.contents .container #role {
+  color: #aaa;
+  font-size: 18px;
+}
+
+.contents .container #name {
+  font-size: 25px;
+  margin-block: 10px;
+}
+
+@media screen and (min-width: 768px) and (max-width: 990px) {
+  body {
+    background-image: url(assets/crew/background-crew-tablet.jpg);
+  }
+  .contents {
+    height: 100%;
+    margin-top: 60px;
+    margin-bottom: 0px;
+  }
+  .contents p.caption.subheading {
+    text-align: left;
+    font-size: 22px;
+    word-spacing: 3px;
+    letter-spacing: 2.5px;
+  }
+  .contents .container {
+    height: fit-content;
+    display: flex;
+    flex-direction: column-reverse;
+    margin-top: 50px;
+  }
+  .contents .container .wrapper #image {
+    height: 500px;
+  }
+  .contents .container hr {
+    display: none;
+  }
+  .contents .container #nav-bar {
+    width: 100px;
+  }
+  .contents .container #role {
+    font-size: 25px;
+  }
+  .contents .container #name {
+    font-size: 40px;
+  }
+  .contents .container #bio {
+    max-width: 75%;
+    margin: auto;
+    margin-block: 15px;
+  }
+}
+
+@media screen and (min-width: 991px) {
+  body {
+    background-image: url(assets/crew/background-crew-desktop.jpg);
+  }
+  .contents {
+    text-align: left;
+    padding-inline: 40px;
+    margin: 0px;
+    margin-top: 80px;
+  }
+  .contents p.caption.subheading {
+    font-size: 22px;
+    letter-spacing: 3px;
+  }
+  .contents .container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+  .contents .container .wrapper {
+    margin: auto;
+    grid-area: 1/2/3/3;
+    width: fit-content;
+  }
+  .contents .container .wrapper img#image {
+    height: calc( 100vh - 182px);
+    transform-origin: center bottom;
+    transform: scale(105%);
+  }
+  .contents .container hr {
+    display: none;
+  }
+  .contents .container #nav-bar {
+    width: 140px;
+    margin: 0px;
+    grid-row: 2/3;
+  }
+  .contents .container #nav-bar div {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+  }
+  .contents .container #nav-bar div:hover {
+    opacity: 0.7;
+  }
+  .contents .container #role {
+    font-size: 26px;
+  }
+  .contents .container #name {
+    font-size: 45px;
+  }
+  .contents .container #bio {
+    max-width: 90%;
+  }
+  .contents .container #nav-bar + div {
+    margin-top: 100px;
+    height: 200px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .contents {
+    padding-inline: 120px;
+    margin-top: 110px;
+  }
+  .contents p.caption.subheading {
+    font-size: 28px;
+    letter-spacing: 4.75px;
+  }
+  .contents .container {
+    grid-template-columns: 1fr 1fr;
+  }
+  .contents .container .wrapper img#image {
+    height: calc( 100vh - 182px);
+    transform: scale(105%);
+  }
+  .contents .container #nav-bar {
+    height: fit-content;
+    padding: 0px;
+  }
+  .contents .container #role {
+    font-size: 30px;
+  }
+  .contents .container #name {
+    font-size: 55px;
+  }
+  .contents .container #bio {
+    font-size: 20px;
+  }
+  .contents .container #nav-bar + div {
+    box-sizing: content-box;
+    margin-top: 100px;
+    height: 300px;
+  }
+}

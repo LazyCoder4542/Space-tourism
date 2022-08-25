@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow&family=Barlow+Condensed:wght@300;600&family=Bellefair&display=swap')
+
+$clr-primary: #d0d6f9
+$clr-neutral-dark: #0b0d17
+$clr-neutral: #ffffff
+$ff-headings: 'Bellefair'
+$ff-subheadings: 'Barlow Condensed'
+$ff-body: 'Barlow'
+
+*
+    box-sizing: border-box
+    margin: 0
+    padding: 0
+
+body
+    scroll-behavior: smooth
+    background-size: cover
+    font-family: $ff-body
+    color: $clr-primary
+    font-size: 15px
+    scrollbar-width: thin
+    scrollbar-color: $clr-primary $clr-neutral-dark
+    &::-webkit-scrollbar 
+        width: 10px
+    &::-webkit-scrollbar-track
+        background: $clr-primary
+    &::-webkit-scrollbar-thumb 
+        background-color: $clr-neutral-dark
+        border-radius: 20px
+        border: 1px solid $clr-primary
+
+.navigation-bar
+    transform: translateX(100%)
+    transition:
+        property: transform
+        duration: 800ms
+        timing-function: ease-out
+    font-weight: 300
+    font-size: 16px
+    line-height: 19px
+    letter-spacing: 2.7px
+    word-spacing: 5px
+    color: $clr-neutral
+    position: fixed
+    height: 100vh
+    width: 68%
+    background: rgba(255, 255, 255, 0.04)
+    backdrop-filter: blur(25px)
+    -webkit-backdrop-filter: blur(25px)
+    top: 0
+    right: 0
+    z-index: 2
+    .close
+        float: right
+        margin: 30px
+    .menu
+        margin: 20px
+            top: 110px
+            right: 0
+        counter-reset: item -1
+        list-style: none
+        li
+            margin: 20px
+                right: 0
+            padding-block: 8px
+            cursor: pointer
+            &.active
+                &::after
+                    float: right
+                    top: 0px
+                    position: relative
+                    display: block
+                    content: ""
+                    width: 3px
+                    height: 20px
+                    background-color: $clr-neutral
+                    transform-origin: center
+                    transform: scaleY(1.5)
+            /*&:hover
+                border-right: 5px rgba(255, 255, 255, 0.5) solid
+            a
+                all: unset
+                color: inherit
+                text-decoration: none
+                &::before 
+                    content: "0" counter(item) " "
+                    counter-increment: item
+                    font-weight: bold
+
+.heading
+    color: $clr-neutral
+    font-family: $ff-headings
+    text-transform: uppercase
+
+.subheading
+    font-family: $ff-subheadings
+    text-transform: uppercase
+    letter-spacing: 2px
+
+.body
+    line-height: 1.7em
+
+.header
+    margin: 20px
+    display: flex
+    align-items: center
+    justify-content: space-between
+    .icon
+        svg
+            transform: scale(0.8)
+    .harmburger
+        svg
+            transform: scale(1.1)
+
+.contents
+    margin: 20px
+    text-align: center
+
+@media screen and ( min-width: 768px )
+    .header
+        margin: 20px 30px
+    .contents
+        margin: 30px
+    body
+        font-size: 16px
+    .navigation-bar
+        transform: none
+        transition: none
+        position: absolute
+        width: 58%
+        height: 90px
+        .close
+            display: none
+        .menu
+            margin: auto
+            height: 100%
+            width: 100%
+            display: flex
+            justify-content: space-evenly
+            li
+
+                padding: 0px
+                margin: 0px
+                a
+                    display: block
+                    width: 100%
+                    top: 50%
+                    padding-block: 30px
+                    position: relative
+                    transform: translateY(-50%)
+                &::before
+                    top: 100%
+                    position: relative
+                    display: block
+                    content: ""
+                    width: 100%
+                    height: 2px
+                    transform: translateY(-100%) scaleX(0)
+                    background-color: $clr-neutral
+                    opacity: 0
+                    transform-origin: center
+                    transition:
+                        property: opacity transform
+                        duration: 300ms
+                &:hover
+                    &::before
+                        opacity: 0.6
+                        transform: translateY(-100%) scaleX(1)
+                
+                &.active
+                    &::after
+                        all: unset
+                    &::before
+                        opacity: 1 !important
+                        transform: translateY(-100%) !important
+
+    .header
+        .icon
+            svg
+                transform: none
+        .hamburger
+            display: none
+@media screen and ( min-width: 768px ) and ( max-width: 990px )
+    .navigation-bar
+        .menu
+            li
+                a::before
+                    all: unset
+@media screen and ( min-width: 991px )
+    body
+        padding-inline: 40px
+    .navigation-bar, .header
+        transform: translateY(30px)
+    .navigation-bar
+        .menu
+            li
+                a::before
+                    content: "0" counter(item) " "
+                    counter-increment: item
+                    font-weight: bold
+    .header
+        .icon
+            /*svg
+                transform: scale(1.5)
+            &::after
+                position: relative
+                bottom: 25px
+                display: inline-block
+                content: ""
+                width: calc(38vw - 40px)
+                margin-left: 40px
+                border-top: 1px solid rgba(255, 255, 255, 0.5)
+                transform: translateY(400%)

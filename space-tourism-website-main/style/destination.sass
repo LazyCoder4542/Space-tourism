@@ -1,0 +1,174 @@
+$clr-primary: #d0d6f9
+$clr-neutral-dark: #0b0d17
+$clr-neutral: #ffffff
+$ff-headings: 'Bellefair'
+$ff-subheadings: 'Barlow Condensed'
+$ff-body: 'Barlow'
+
+
+body
+    background-image: url(assets/destination/background-destination-mobile.jpg)
+
+.contents
+    .container1
+        p.caption.subheading
+            //color: $clr-neutral
+            font-weight: 300
+            word-spacing: 2px
+            &::before
+                content: "01 "
+                display: inline
+                font-weight: 600
+                color:#666
+                word-spacing: 10px
+        img#image
+            width: 150px
+            margin: 30px
+    .container2
+        ul
+            margin: auto
+            width: 65%
+            display: flex
+            list-style: none
+            justify-content: space-between
+            li
+                cursor: pointer
+                &::before
+                    top: 100%
+                    position: relative
+                    display: block
+                    content: ""
+                    width: 95%
+                    height: 3px
+                    transition:
+                        property: opacity transform
+                        duration: 300ms
+                    transform: translateY(10px) scaleX(0)
+                    background-color: $clr-primary
+                    opacity: 0
+                &:hover
+                    &::before
+                        transform: translateY(10px) scaleX(1.2)
+                        opacity: 0.4
+                &.active
+                    &::before
+                        opacity: 1
+                        transform: translateY(10px) scaleX(1.2)
+            
+        #name
+            margin-top: 20px
+            font-size: 60px
+        #description
+            max-width: 96%
+            margin: auto
+                bottom: 30px
+        hr
+            all: inherit
+            border-top: 1.5px solid rgba(255, 255, 255, 0.4)
+        .wrapper
+            margin: 30px
+            div
+                margin: 30px
+                *
+                    margin: 20px
+                .heading
+                    font-size: 25px
+                    font-weight: light
+
+@media screen and ( min-width: 768px ) and ( max-width: 990px)
+    body
+        background-image: url(assets/destination/background-destination-tablet.jpg)
+    .contents
+        .container1
+            margin-top: 60px
+            p.caption.subheading
+                text-align: left
+                font-size: 22px
+                word-spacing: 3px
+                letter-spacing: 2.5px
+            img#image
+                width: 300px
+                margin: 70px 0px 50px
+        .container2
+            ul
+                letter-spacing: 3px
+                width: 45%
+            #name
+                margin-top: 45px
+                font-size: 80px
+            #description
+                max-width: 80%
+                margin: 10px auto 50px
+            hr
+                width: 80%
+                margin: auto
+            .wrapper
+                margin: 10px auto 20px
+                width: 70%
+                display: grid
+                grid-template-columns: 1fr 1fr
+                div
+                    margin: 10px
+                    *
+                        margin: 15px
+                    .heading
+                        font-size: 35px
+@media screen and ( min-width: 991px )
+    body
+        background-image: url(assets/destination/background-destination-desktop.jpg)
+    .contents
+        padding-inline: 40px
+        margin: 0px
+        margin-top: 80px
+        display: grid
+        grid-template-columns: auto auto
+        column-gap: 5vw
+        .container
+            text-align: left
+        .container1
+            p.subheading
+                font-size: 22px
+                letter-spacing: 3px
+            img#image
+                width: 30vw
+                margin: 40px 50px 0px
+        .container2
+            margin-top: 60px
+            ul
+                margin: 0px
+            #name
+                font-size: 90px
+            #description
+                max-width: 100%
+            hr
+                margin: 0px
+            .wrapper
+                display: grid
+                grid-template-columns: 1fr 1fr
+                margin: 0px
+                    block: 10px
+                div
+                    margin: 0px
+                    *
+                        margin: 0px
+                            block: 10px
+@media screen and ( min-width: 1440px )
+    .contents
+        margin-top: 110px
+        padding-inline: 120px
+        grid-template-columns: 11fr 6fr
+        column-gap: 0vw
+        .container1
+            p.subheading
+                font-size: 28px
+                letter-spacing: 4.75px
+            img#image
+                width: 65%
+                margin-top: 60px
+        .container2
+            margin-top: 100px
+            #name
+                margin-top: 50px
+            #decription
+                margin: 30px auto 60px
+    

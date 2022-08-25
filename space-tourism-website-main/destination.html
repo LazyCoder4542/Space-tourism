@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Space Tourism - Destination</title>
+    <link rel="stylesheet" href="style/template.css">
+    <link rel="stylesheet" href="style/destination.css">
+    <link rel="shortcut icon" href="svg.png" type="image/x-icon">
+</head>
+<body>
+    <div class="header">
+        <div class="icon">
+            <svg xmlns="http://www.w3.org/2000/svg" width="48" height="48"><g fill="none" fill-rule="evenodd"><circle cx="24" cy="24" r="24" fill="#FFF"/><path fill="#0B0D17" d="M24 0c0 16-8 24-24 24 15.718.114 23.718 8.114 24 24 0-16 8-24 24-24-16 0-24-8-24-24z"/></g></svg>
+        </div>
+        <div class="hamburger">
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M0 0h24v3H0zM0 9h24v3H0zM0 18h24v3H0z"/></g></svg>
+        </div>
+    </div>
+
+    <div class="navigation-bar subheading">
+        <div class="close">
+            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="21"><g fill="#D0D6F9" fill-rule="evenodd"><path d="M2.575.954l16.97 16.97-2.12 2.122L.455 3.076z"/><path d="M.454 17.925L17.424.955l2.122 2.12-16.97 16.97z"/></g></svg>
+        </div>
+        <ol class="menu">
+            <li><a href=".">home</a></li>
+            <li class="active"><a href="#">destination</a></li>
+            <li><a href="crew.html">crew</a></li>
+            <li><a href="technology.html">technology</a></li>
+        </ol>
+    </div>
+
+    <div class="contents">
+        <div class="container container1">
+            <p class="caption subheading">pick your destination</p>
+            <img id="image">
+        </div>
+        <div class="container container2">
+            <ul class="subheading">
+                <li>moon</li>
+                <li>mars</li>
+                <li>europa</li>
+                <li>titan</li>
+            </ul>
+            <p class="heading" id="name"></p>
+            <p class="body" id="description"></p>
+            <hr>
+            <div class="wrapper">
+                <div>
+                    <p class="subheading">avg. distance</p>
+                    <p class="heading" id="distance"></p>
+                </div>
+                <div>
+                    <p class="subheading">est. travel time</p>
+                    <p class="heading" id="travel"></p>
+                </div>
+            </div>
+        </div>
+    </div>
+<script src="style/template.js"></script>
+<script src="data.js"></script>
+<script src="destination.js"></script>
+</body>
+</html>
